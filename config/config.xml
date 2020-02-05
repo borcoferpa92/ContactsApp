@@ -1,0 +1,26 @@
+<config>
+ <input>
+   <name>contactosAnonimos.csv</name>
+   <sep>,</sep>
+ </input> 
+ <columnas>
+   <predictorasnumericas>cantidad sesiones, numero visitas paginas web...</predictorasnumericas>
+   <fuenteoriginal>fuente original</fuenteoriginal>
+   <dominio_mail></dominio_mail>
+   <fechas>
+     <creacion></creacion>
+     <ultima_mod></ultima_mod>
+     <apertura_ultimo></apertura_ultimo>
+     <envio_ultimo></envio_ultimo>
+     <apertura_primero></apertura_primero>
+     <envio_primero></envio_primero>
+     <visita_primero></visita_primero>
+     <visita_ultimo></visita_ultimo>
+     <tiempo_025_8_24></tiempo_025_8_24>
+   </fechas>
+   
+   <target>status</target>
+   <llamada>Resultado LLamada</llamada>
+   
+ </columnas>
+</config>
