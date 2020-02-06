@@ -33,7 +33,7 @@ clasificarContactosApp <- function(path){
   loginfo('Procesando los datos...', logger = 'log')
   datos <- preProcesarDatos(datos, config)
   loginfo('Datos procesados.', logger = 'log')
-  browser()
+
   
   loginfo('Ejecucion finalizada! Felicidades! =)', logger = 'log')
   
