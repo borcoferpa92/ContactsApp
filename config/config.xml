@@ -4,10 +4,10 @@
    <sep>,</sep>
  </input> 
  <columnas>
-   <predictorasnumericas>cantidad sesiones, numero visitas paginas web...</predictorasnumericas>
-   <fuenteoriginal>fuente original</fuenteoriginal>
-   <dominio_mail></dominio_mail>
-   <fechas>
+   <PredictorasNumericas>cantidad sesiones, numero visitas paginas web...</PredictorasNumericas>
+   <FuenteOriginal>fuente original</FuenteOriginal>
+   <DominioMail></DominioMail>
+   <Fechas>
      <creacion></creacion>
      <ultima_mod></ultima_mod>
      <apertura_ultimo></apertura_ultimo>
@@ -16,11 +16,11 @@
      <envio_primero></envio_primero>
      <visita_primero></visita_primero>
      <visita_ultimo></visita_ultimo>
-     <tiempo_025_8_24></tiempo_025_8_24>
-   </fechas>
+     <tiempo>0.25, 8, 24</tiempo>
+   </Fechas>
    
-   <target>status</target>
-   <llamada>Resultado LLamada</llamada>
+   <Target>status</Target>
+   <Llamada>Resultado LLamada</Llamada>
    
  </columnas>
 </config>
