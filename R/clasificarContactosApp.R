@@ -31,7 +31,7 @@ clasificarContactosApp <- function(path){
   loginfo('Datos leídos.', logger = 'log')
   
   loginfo('Procesando los datos...', logger = 'log')
-  datos <- preProcesarDatos(datos, config)
+  datos <- preProceso(datos, config)
   loginfo('Datos procesados.', logger = 'log')
 
   
@@ -48,4 +48,3 @@ clasificarContactosApp <- function(path){
     removeHandler(writeToFile, logger = 'log')
     })
 }
-

@@ -27,7 +27,7 @@ leerConfig <- function(path){
     stop()
   })
   
-  loginfo('Config leído.', logger = 'log')
+  #loginfo('Config leído.', logger = 'log')
   
   validateConfigNodes(config)
   
