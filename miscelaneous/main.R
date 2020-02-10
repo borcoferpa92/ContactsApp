@@ -15,3 +15,6 @@ lapply(paste0('R/', list.files(path = 'R/', recursive = TRUE)), source)
 debug(clasificarContactosApp)
 clasificarContactosApp(directorio)
 undebug(clasificarContactosApp)
+
+
+clasificarContactos::clasificarContactosApp(path)

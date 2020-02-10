@@ -77,7 +77,7 @@ createRatios <- function(datos, config){
 #' @param datos 
 #' @param config
 #'
-#'
+#' @import dummies
 #'
 generarColumnas <- function(datos, config){
   
@@ -107,6 +107,8 @@ generarColumnas <- function(datos, config){
   datos$diffVisita[is.na(datos$diffVisita)] <- 0
   datos$diffPrimero[is.na(datos$diffPrimero)] <- Inf
   datos$diffUltimo[is.na(datos$diffUltimo)] <- Inf
+  
+  
   
   if(!is.null(config$columnas$fechas$tiempos)){
     

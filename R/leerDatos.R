@@ -23,7 +23,7 @@ leerDatos <- function(config, path){
   })
   
   if(nrow(datos) == 0 | ncol(datos) == 0){
-    logerror('Datos mal leídos, verifica que tengan un buen formato.',
+    logerror('Datos mal leidos, verifica que tengan un buen formato.',
              logger = 'log')
   }
   
