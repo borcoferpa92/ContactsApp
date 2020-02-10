@@ -81,6 +81,7 @@ createRatios <- function(datos, config){
 #'
 generarColumnas <- function(datos, config){
   
+  library(dummies)
   # POSIXct maneja horas.
   datos$diffCr_Ul <- abs(difftime(as.POSIXct(datos[, config$columnas$fechas$creacion]),
                                   as.POSIXct(datos[, config$columnas$fechas$ultima_mod]),

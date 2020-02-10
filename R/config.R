@@ -27,11 +27,12 @@ leerConfig <- function(path){
     stop()
   })
   
-  #loginfo('Config leído.', logger = 'log')
+  #loginfo('Config leido.', logger = 'log')
   
   validateConfigNodes(config)
   
   config$columnas$predictorasNumericas <- trimws(strsplit(config$columnas$predictorasNumericas, ',')[[1]])
+  config$columnas$fechas$tiempos <- as.numeric(trimws(strsplit(config$columnas$fechas$tiempos, ',')[[1]]))
   
   config$columnas$mails$ratios <- as.logical(config$columnas$mails$ratios)
   
@@ -80,7 +81,7 @@ validateConfigNodes <- function(config){
     
     nodosMalos <- names(nodos)[!nodos]
     logerror(paste0('Los nodos: ', paste(nodosMalos, collapse = ', '), 
-                    ' están mal estructurados', logger = 'log'))
+                    'estan mal estructurados', logger = 'log'))
     stop()
   }
   

@@ -1,8 +1,10 @@
+lapply(c("logging", "xgboost", "XML", "bit64"), require, character.only = T)
+
 directorio <- path <- "~/Desktop/DATA_BOOTCAMP/WEEK7/clasificarContactos/"
 
 #' PASTE0 concatena sin espacios y PASTE concatena seleccionando separador.
 #' Poniendo collapse = ', ' concatena si tenemos un vector y lo pone junto
-#' si no escribe una linea para elemento del vector.
+#' si no escribe una linea para cada elemento del vector.
 
 setwd(directorio)
 

@@ -13,6 +13,8 @@
 #' @author Borja Cobos
 clasificarContactosApp <- function(path){
   
+  library(logging)
+  
   tryCatch(expr = { 
   
   #Generar el manejador de log.
@@ -24,22 +26,30 @@ clasificarContactosApp <- function(path){
   
   loginfo('Leyendo el config...', logger = 'log')
   config <- leerConfig(path)
-  loginfo('Config leído.', logger = 'log')
+  loginfo('Config leido.', logger = 'log')
   
   loginfo('Leyendo los datos', logger = 'log')
   datos <- leerDatos(config, path)
-  loginfo('Datos leídos.', logger = 'log')
+  loginfo('Datos leidos.', logger = 'log')
   
   loginfo('Procesando los datos...', logger = 'log')
-  datos <- preProceso(datos, config)
+  splitDatos <- preProceso(datos, config)
   loginfo('Datos procesados.', logger = 'log')
+  
+  loginfo('Generando el modelo...', logger = 'log')
+  output <- generarModelo(splitDatos, config)
+  loginfo('Modelo Generado', logger = 'log')
+  
+  loginfo('Generando output...', logger = 'log')
+  generarOutput(output, config, path)
+  loginfo('Output generado.', logger = 'log')
 
   
-  loginfo('Ejecucion finalizada! Felicidades! =)', logger = 'log')
+  loginfo('Ejecucion finalizada con exito! Felicidades! =)', logger = 'log')
   
   
    },error = function(e){
-    logerror('La aplicación ha petado.',
+    logerror('La aplicacion ha petado.',
              logger = 'log')
     stop()
     
